@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/tabs.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tabs">
+        <div class="tabs-control">
+
+            
+            <ul class="list list-titles">
+                {{#each titles}}
+                <li class="list-item">
+                    <label for="{{link}}" class="title">{{text}}</label>
+                {{/each}}
+            </li>
+            </ul>
+
+            <ul class="list list-contents">
+                {{#each contents}}
+                <li class="list-item">
+                    <input class="tab-content-toggle" id="{{this.link}}" name="tab-toggles" type="radio">
+                    <div class="content">
+                        {{{this.text}}}
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
